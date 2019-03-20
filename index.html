@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>-------------Registration--------------</title>
+</head>
+
+<body style ="background-color:lightgrey">
+<script>
+	
+	var check = function()
+{
+  if (document.getElementById('password').value == document.getElementById('confirm_password').value) 
+    {
+   	 document.getElementById('message').style.color = 'green';
+   	 document.getElementById('message').innerHTML = 'matching';
+    }
+  else
+   {
+  	  document.getElementById('message').style.color = 'red';
+  	  document.getElementById('message').innerHTML = 'not matching';
+   }
+}
+
+</script>
+
+
+	<h1 style="text-align:center;background-color:tomato">-----------REGISTER--------- </h1>
+	
+	<form method="get" action="/var/www/html/271/a.php">
+	
+	<b>First name :	</b>
+	<input type="text" placeholder="First name"required><br>
+	
+	<br><br>
+	<b>Last name:	</b>
+	<input type="text" placeholder="Last name"required><br>
+	
+	<br><br>
+	<b>Mobile No.:	</b>
+	<input type="text" placeholder="9861783612"required><br>
+	
+	<br><br>
+	<b>Email:	</b>
+	<input type="email" placeholder="abc@gmail.com" id="email" type="email" onkey='validate();' required><br>
+	<span id='msg'></span>
+	
+	
+	<br><br>
+	<b>Gender:	<br></b>
+	<input type="radio" name="gender" value="male">Male<br>
+	<input type="radio" name="gender" value="female">Female<br>
+	<input type="radio" name="gender" value="other">Other<br>
+	
+	<br><br>
+	<b>DOB:	</b>
+	<input type="date" name="bday" required><br>
+	
+	<br><br>
+	Username : 
+	<input type="text"  name="username" placeholder="Username" required><br>
+  
+  	<br>
+  	Password : 
+  	<input name="password" id="password" type="password" placeholder="password" onkeyup='check();' >
+	
+	<br>
+	<br>
+	
+	Confirm password: 
+  	<input type="password" name="confirm_password" id="confirm_password" placeholder="password" onkeyup='check();' /> 
+  	<span id='message'></span>
+	
+	<br><br>
+  	
+  	<button name="Insert"  >Insert</button>
+
+ 	<button name="Update"  >Update</button>
+	
+	<button name="Delete"  >Insert</button>
+	
+	<button name="Select"  >Select</button>
+</form>
+	
+
+</body>
+</html>
